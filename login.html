@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .login-container img {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #5a4bcf;
+        }
+        .forgot-password {
+            text-align: right;
+            display: block;
+            margin-bottom: 20px;
+            color: #6c5ce7;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .or-divider::before, .or-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #ddd;
+        }
+        .or-divider span {
+            margin: 0 10px;
+            color: #aaa;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+        }
+        .social-login button {
+            flex: 1;
+            padding: 10px;
+            margin: 0 5px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .social-login button img {
+            width: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .create-account {
+            font-size: 0.9rem;
+        }
+        .create-account a {
+            color: #6c5ce7;
+            text-decoration: none;
+        }
+        
+        /* Responsive Design */
+        @media(max-width: 480px) {
+            .login-container {
+                padding: 20px;
+            }
+            .social-login button {
+                margin: 5px 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="./Nightstand -10 1 (9).png" alt="Plant Image">
+        <h2>Welcome back</h2>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <a href="./password.html" class="forgot-password">Forgot password?</a>
+       <a href="./login.html"><button class="btn">Login</button></a>
+        
+        <div class="or-divider"><span>OR</span></div>
+        
+        <div class="social-login">
+            <button><img src="./google_logo.png" alt="Google">Continue with Google</button>
+            <button><img src="./apple_logo (1).png" alt="Apple">Continue with Apple</button>
+        </div>
+        
+        <p class="create-account">First time here? <a href="./create.html">Create an account</a></p>
+    </div>
+</body>
+</html>

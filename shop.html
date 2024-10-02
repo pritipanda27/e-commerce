@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oasis-shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-images {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .product-images img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-details h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            font-size: 25px;
+        }
+
+        .current-price {
+            font-size: 50px;
+            color: #000;
+        }
+
+        .original-price {
+            font-size: 30px;
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        .discount {
+            color: #ff0000;
+        }
+
+        .color-options {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .color.grey {
+            background-color: #dcdcdc;
+        }
+
+        .color.brown {
+            background-color: #8b4513;
+        }
+
+        .color.green {
+            background-color: #228b22;
+        }
+
+        .buy-now {
+            padding: 10px 20px;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 25px;
+            border-radius: 5px;
+        }
+
+        .shipping-info {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .suggestions {
+            margin-top: 40px;
+        }
+
+        .suggestions h2 {
+            margin-bottom: 20px;
+        }
+
+        .suggested-products {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .product-card {
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 370px;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .product-card p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 768px) {
+            .product {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+       
+    </header>
+
+    <main>
+        <section class="product">
+            <div class="product-images">
+                <img src="./PDP Image 1.png" alt="Luxe Armchair Front">
+                <img src="./PDP Image2.png" alt="Luxe Armchair Side">
+                <img src="./PDP Image3.png" alt="Luxe Armchair Back">
+                <img src="./PDP Image4.png" alt="Luxe Armchair Close-up">
+            </div>
+            <div class="product-details">
+                <h1>Luxe Armchair - Left Arm Chute</h1>
+                <div class="rating">
+                    <span>4.8 (243 reviews)</span>
+                </div>
+                <div class="price">
+                    <span class="current-price">$899.00</span>
+                    <span class="original-price">$1,500.00</span>
+                    <span class="discount">40% off</span>
+                </div>
+                <p>Ultra-functional and elegantly minimalist, our Luxe Armchair Collection draws inspiration from Nordic-style décor. It features a neutral color palette and natural wood accents, highlighted by uniquely designed hexagonal legs.</p>
+                
+                <div class="color-options">
+                    <span>Select Color:</span>
+                    <button class="color grey"></button>
+                    <button class="color brown"></button>
+                    <button class="color green"></button>
+                </div>
+                
+                <a href="./cart.html"><button class="buy-now">Buy Now</button></a>
+                <p class="shipping-info">Free shipping included. Made from the best of materials sourced.</p>
+            </div>
+        </section>
+
+        <section class="suggestions">
+            <h2>People Also Viewed</h2>
+            <div class="suggested-products">
+                <div class="product-card">
+                    <img src="./image1.png" alt="Faux Leather Sofa">
+                    <p>Faux Leather Sofa Couch</p>
+                    <span>$129</span>
+                </div>
+                <div class="product-card">
+                    <img src="./Image 2.png" alt="Boucle Accent Chair">
+                    <p>Boucle Accent Chair</p>
+                    <span>$44</span>
+                </div>
+                <div class="product-card">
+                    <img src="./Image 3.png" alt="Ceramic Flower Vase">
+                    <p>Ceramic Flower Vase</p>
+                    <span>$8</span>
+                </div>
+                <div class="product-card">
+                    <img src="./Image 11.png" alt="Modern Fabric Accent Chair">
+                    <p>Modern Fabric Accent Chair</p>
+                    <span>$38</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Contact Us: +1 999 888-76-54</p>
+                <p>Email: hello@oasis.com</p>
+            </div>
+            <div class="address">
+                <p>2118 Thornridge Cir, Syracuse, Connecticut 35624</p>
+                <p>Open Hours: 9am—6pm</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

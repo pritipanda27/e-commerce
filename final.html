@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    overflow-x:hidden;
+
+}
+
+
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: fixed; /* Make header fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other elements */
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+   
+
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Georgia',  serif;
+    font-style: italic;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 65px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-icon i{
+    font-size: 20px;
+    color: #7c71df;
+    margin-top: 14px;
+}
+.cart-icon{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 45px;
+    background-color: #f8f7fb;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #7c71df;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+}
+.btn i{
+    font-size: 15px;
+    color: #ffffff;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.btn:hover {
+    background-color: #483d8b;
+}
+/* hide the menu icon by default */
+.menu-icon{
+    display: none;
+}
+
+.design{
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+h5 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+   margin-top: 30px;
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.filter-buttons button.active {
+    background-color: #6a4dff;
+    color: #fff;
+}
+
+/* Hero Section */
+
+.header-section {
+    background-color: #fff;
+    text-align: left;
+    padding: 50px 20px;
+    margin-top: 58px;
+    margin-left: 135px;
+   
+}
+
+.content-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn1{
+    text-decoration: none;
+    background-color: #7c71df;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+}
+
+.image-section {
+    background-color: #fff;
+    
+}
+
+.image-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+.articles-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+    margin-left: 160px;
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.article img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.article h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.article a {
+    display: inline-block;
+    font-size: 12px;
+    color: #7a7cff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+
+.btn2 {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    display: inline-flex;
+    margin-left: 45%;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.btn2:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .articles-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Footer */
+.footer {
+    background-color: #111;
+    color: white;
+    padding: 12px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Georgia',  serif;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    font-size: 14px;
+    margin-top: 111px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-middle {
+    text-align: left;
+    line-height: 0.8;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 82px;
+}
+
+.footer-middle p {
+    margin-bottom: 47px;
+    margin-top: 5px;
+}
+
+.footer-middle .phone-number {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -38px;
+}
+
+.footer-middle .email a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-middle .email a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 58px;
+    margin-bottom: -108px;
+}
+
+.footer-right p {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    position: absolute;
+    right: 20px;
+    bottom: 86px;
+    font-size: 14px;
+    color: white;
+}
+
+.footer-back-to-top {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.footer-back-to-top a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-back-to-top a:hover {
+    text-decoration: underline;
+}
+        </style>
+</head>
+<body>
+     <!-- Header -->
+     <header>
+        <div class="container">
+            <div class="logo">Oasis</div>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Shop</a></li>
+                    <li><a href="indexx.html">Categories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-icon" id="menuIcon">
+                <i class="fa-solid fa-bars" id="openIcon"></i>
+                <i class="fa-solid fa-times" id="closeIcon"></i>
+
+            </div>
+
+            <div class="actions">
+                <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <a href="./login.html" class="btn">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="header-section">
+        <div class="content-container">
+            <h1>Transforming Your Living Space: Top Trends in <br>Modern Furniture</h1>
+            <p>Explore the latest trends in modern furniture design that can elevate your living space with style and functionality</p>
+            <a href="#" class="btn1">Read article</a>
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="./p1.png" alt="Modern Living Room Design">
+        </div>
+    </section>
+
+    <section class="articles-section"></section>
+        <h2>Latest Articles</h2>
+        <div class="articles-container">
+            <div class="article">
+                <img src="./p2.png" alt="Minimalism Article">
+                <h3>The Art of Minimalism: How to Achieve a Sleek Look</h3>
+                <p>Discover tips and tricks for adopting a minimalist approach to interior design and creating a sleek, clutter-free space.</p>
+                <a href="#">Interior Design</a>
+            </div>
+
+            <div class="article">
+                <img src="./p3.png" alt="Perfect Sofa Article">
+                <h3>Choosing the Perfect Sofa: A Guide to Style and Comfort</h3>
+                <p>Learn how to select the ideal sofa that balances style, comfort, and durability for your living room.</p>
+                <a href="#">Interior Design</a>
+            </div>
+
+            <div class="article">
+                <img src="./p4.png" alt="Sustainable Furniture Article">
+                <h3>Sustainable Furniture: Eco-Friendly Choices for a Modern Home</h3>
+                <p>Dive into sustainable furniture options that are both stylish and environmentally friendly.</p>
+                <a href="#">Interior Design</a>
+            </div>
+
+            <div class="article">
+                <img src="./p5.png" alt="Small Spaces Article">
+                <h3>Maximizing Small Spaces: Innovative Furniture Solutions</h3>
+                <p>Find out how to make the most of small living spaces with innovative and space-saving furniture designs.</p>
+                <a href="#">Interior Design</a>
+            </div>
+
+            <div class="article">
+                <img src="./p6.png" alt="Mixing Styles Article">
+                <h3>Mixing and Matching: Creating Harmony with Different Styles</h3>
+                <p>Get insights on how to blend various furniture styles to create a harmonious and visually appealing interior.</p>
+                <a href="#">Interior Design</a>
+            </div>
+
+            <div class="article">
+                <img src="./p7.png" alt="Accent Pieces Article">
+                <h3>Accent Pieces that Pop: Adding Character to Your Home</h3>
+                <p>Discover the power of accent pieces and how they can add character and personality to your modern home.</p>
+                <a href="#">Interior Design</a>
+            </div>
+        </div>
+        <div class="btn-container">
+            <a href="#" class="btn2">Show all articles</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h1 class="footer-logo">Oasis</h1>
+                <div class="footer-nav">
+                    <a href="#">Home</a> / 
+                    <a href="#">Blog</a> / 
+                    <a href="#">Sale</a> / <br>
+                    <a href="#">About us</a> /
+                </div>
+            </div>
+            <div class="footer-middle">
+                <p>Contact Us</p>
+                <p class="phone-number">+1 999 888-76-54</p>
+                <p class="email">Email: <a href="mailto:hello@algolipsum.com">hello@algolipsum.com</a></p>
+            </div>
+            <div class="footer-right">
+                <p>Address</p>
+                <p>2118 Thornridge Cir.<br> Syracuse, Connecticut 35624</p>
+                <p>Opening hours: <br>9am—6pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 — Copyright</p>
+        </div>
+        <div class="footer-back-to-top">
+            <a href="#top">&#x25B2;</a>
+        </div>
+    </footer>
+</body>
+</html>
